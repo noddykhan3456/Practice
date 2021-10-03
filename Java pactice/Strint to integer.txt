@@ -1,0 +1,31 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+// String to Integer
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+// 		int a = 71 ;
+// 		char c = (char)a;
+// 		System.out.println(c);
+//         char c = 'A' ;
+//         int a = c ;
+// 		System.out.println(a);
+        // String a = "200" ;
+        // int i = Integer.parseInt(a);
+//         long l = Long.parseLong(a);
+// 		System.out.println(l);
+
+        int n = 24 ;
+        String s;
+        s = Integer.toString(n);
+        s = s + 1 ;
+		System.out.println(s);
+	}
+}
