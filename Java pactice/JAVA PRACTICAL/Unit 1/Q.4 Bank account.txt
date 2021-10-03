@@ -1,0 +1,89 @@
+import java.util.*;
+
+public class Main
+{
+    static int balance;
+    double interest;
+    
+    Scanner sc = new Scanner(System.in);
+    
+    //Create Accoount
+    public void createAccount() {
+        System.out.print("\nEnter account holder name : ");
+        String name = sc.nextLine();
+        System.out.print("Enter account number : ");
+        int accNo = sc.nextInt();
+        System.out.print("Enter initial balance : ");
+        balance = sc.nextInt();
+        System.out.print("Enter rate of interest : ");
+        interest = sc.nextDouble();
+        System.out.print("Enter contact no : ");
+        String contactNo = sc.next();
+    }
+    
+    //DEPOSITE
+    public void deposite() {
+        System.out.print("\nEnter Amount For Deposite : ");
+        int amt = sc.nextInt();
+        balance = balance + amt ;
+        displayBalance();
+    }
+    
+    // Withdraw
+    public void withdraw() {
+        System.out.print("\nEnter Withdrawal Amount : ");
+        int withdrawAmount = sc.nextInt() ;
+        if(balance>=withdrawAmount) {
+            balance = balance - withdrawAmount ;
+            displayBalance();
+        }
+        else {
+            System.out.println("\nYour balance is less than " + withdrawAmount + "\tTransaction failed...!!");
+        }
+    }
+    
+    //Compute INTEREST
+    public void computeInterest() {
+        double interestAmt = balance*(interest/100);
+        System.out.println("\nFor balance of amount "+balance+" with rate of interest "+interest+"% amount "+interestAmt+" will be deposited to your account");
+        
+    }
+    
+    // Display balance 
+    public void displayBalance() {
+        System.out.println("Account Balance : " + balance);
+    }
+    
+	public static void main(String[] args) {
+		Main obj = new Main();
+        Scanner sc = new Scanner(System.in);
+        int ch ;
+        do{
+		System.out.print("\nEnter 1  For CREATE ACCOUNT\nEnter 2  For DEPOSITE\nEnter 3  For WITHDRAW\nEnter 4  For COMPUTE INTEREST\nEnter 5  For DISPLAY BALANCE\n");
+		int choice = sc.nextInt() ;
+		    switch(choice){
+		        case 1:
+		            obj.createAccount();
+		        break;
+		        
+		        case 2:
+		            obj.deposite();
+		        break;
+		        
+		        case 3:
+		            obj.withdraw();
+		        break;
+		        
+		        case 4:
+		            obj.computeInterest();
+		        break;
+		      
+		        case 5:
+		            obj.displayBalance();
+		        break;
+		    }
+		    System.out.print("\nEnter 1 for continue and 0 for exit : ");
+		    ch = sc.nextInt();
+        }while(ch==1);
+	}
+}

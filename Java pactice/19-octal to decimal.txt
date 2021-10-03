@@ -1,0 +1,30 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		int octal = 116 ;
+		double decimal = convertToDeci(octal);
+		System.out.println(decimal);
+	}
+	static double convertToDeci(int octal){
+	    int rem ;
+	    double sum = 0 ;
+	    int i = 0 ;
+	    while(octal!=0){
+	        rem = octal % 10;
+	        octal = octal / 10 ;
+	        sum = sum + rem*Math.pow(8,i) ;
+	        i++ ;
+	    }
+	    return sum ;
+	}
+}
