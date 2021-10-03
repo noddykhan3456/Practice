@@ -1,0 +1,33 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World");
+// 		int[] array = new int[5];  // declaration of array with size
+		double[] array = {1,2,3,4,5};
+		double total = 0 ;
+		int size = array.length ;
+		
+		for(double value : array)
+		{
+		    total += value ;
+		}
+		double avg = total / size ;
+		double squaDiff = 0 ; 
+		for(double val : array)
+		{
+		   squaDiff += (val - avg)*(val - avg);
+		}
+		double variance= squaDiff / size ;
+		double standardDiviation = Math.sqrt(variance);
+		System.out.format("Standard Diviation : %.3f", standardDiviation);
+	}
+}
