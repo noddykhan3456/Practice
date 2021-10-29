@@ -1,0 +1,40 @@
+import java.io.*;
+
+class employee
+{
+    int age;
+    String name,designation;
+    double salary;
+    
+    // Unparamerized Constructor
+    employee() throws IOException
+    { 
+        DataInputStream ob = new DataInputStream(System.in);
+        System.out.print("Enter age : ");
+        age = Integer.parseInt(ob.readLine());
+        System.out.print("Enter name : ");
+        name = ob.readLine();
+        System.out.print("Enter designation : ");
+        designation = ob.readLine();
+        System.out.print("Enter salary : ");
+        salary = Double.parseDouble(ob.readLine());
+    }
+    
+    // Output
+    void printEmployee()
+    {
+		System.out.println("Age : " + age);
+		System.out.println("Name : " + name);
+		System.out.println("Designation : " + designation);
+		System.out.println("Salart : " + salary);
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) throws IOException
+	{ 
+	   employee emp = new employee();
+	   emp.printEmployee();
+	}
+}
