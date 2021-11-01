@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and object</title>
+</head>
+<body>
+    <div class="container">Simple si website</div>
+
+    <script>
+        // diffrent types of datatype
+        let var1 = 21 ;
+        let var2 = "Nadeem" ;
+        let var3 = true ;
+        let var4 = null ;
+        let var5 = undefined ;
+
+
+        // object 
+        let objectName = {
+            name : "Nadeem" ,
+            salary : 10 ,
+            age : 19 
+        }
+        console.log(objectName);
+
+        console.log(objectName.name);
+        console.log(objectName.salary);
+        console.log(objectName.age);
+        // OR 
+        // console.log(objectName['name']);
+        // console.log(objectName['salary']);
+        // console.log(objectName['age']);
+
+
+
+        // arrays
+        // let arrayName = [23,1,343,2,"nadeem",undefined];
+        // let arrayName = new Array(23, 34);  // 23 and 34 elements of array
+        let arrayName = new Array(23);  // 23 is the size of an array
+        console.log(arrayName);
+        // console.log(arrayName[2]);
+
+        console.log(arrayName.length);
+
+        // arrayName =arrayName.sort();
+        console.log(arrayName.sort());
+
+        arrayName.push("this is pushed");
+        console.log(arrayName);
+    </script>
+</body>
+</html>

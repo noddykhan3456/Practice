@@ -1,0 +1,143 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+// Structure declartion
+struct node{
+    int data;
+    struct node* next;
+};
+
+// Head deeclaration
+struct node* head;
+
+// Function prototype
+void insert_end(int element,struct node* temp ,struct node* temp1);
+void insert_beg(int element,struct node* temp );
+void insert_pos(int element,struct node* temp, int position,struct node* temp1);
+void delete_pos(int position,struct node* temp1);
+void display(struct node* temp1);
+
+int main()
+{
+    head = NULL;
+    int element,c,k,position,pos;
+    
+    // First element
+    printf("Enter element : ");
+    scanf("%d",&element);
+    struct node* temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = element;
+    temp->next =  NULL;
+    head = temp;
+    
+    struct node* temp1 = head;
+    display(temp1);
+    
+    do{
+        printf("\nEnter '1' for insert at begining\nEnter '2' for insert at end\nEnter '3' for insert at nth position\nENter '4' for deleting a node from nth position : ");
+        scanf("%d",&c);
+        switch(c){
+            case 1:
+             // Insert at begining
+                printf("\nEnter element : ");
+                scanf("%d",&element);
+                insert_beg(element,temp);
+                temp1 = head;
+                display(temp1);
+            break;
+            
+            case 2:
+            // Insert at end
+                printf("\nEnter element : ");
+                scanf("%d",&element);
+                insert_end(element,temp,temp1);
+                display(temp1);
+            break;
+            
+            case 3:
+            // Insert Random
+               printf("\nEnter element : ");
+               scanf("%d",&element);
+               printf("Enter position : ");
+               scanf("%d",&position);
+               insert_pos(element,temp, position,temp1);
+               temp1 = head;
+               display(temp1);
+            break;
+            
+            case 4:
+            // Delete Random
+               printf("\nEnter position : ");
+               scanf("%d",&pos);
+               delete_pos(pos,temp1);
+               temp1 = head;
+               display(temp1);
+            break;
+            
+            default :
+            printf("Invalid option.");
+        }
+        printf("\nEnter 1 for continue : ");
+        scanf("%d",&k);
+    }while(k == 1);
+    return 0;
+}
+
+// Insert begining
+void insert_beg(int element,struct node* temp ){
+    temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = element;
+    temp->next = head;
+    head = temp;
+}
+
+// Insert End
+void insert_end(int element,struct node* temp , struct node* temp1){
+    temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = element;
+    temp->next = NULL;
+    while(temp1->next != NULL){
+        temp1 = temp1->next;
+    }
+    temp1->next = temp;
+}
+
+// Insert Random
+void insert_pos(int element,struct node* temp, int position,struct node* temp1){
+    temp = (struct node*)malloc(sizeof(struct node));
+    temp->data = element;
+    for(int i = 1; i < position - 1; i++){
+        temp1 = temp1->next;
+    }
+    temp->next = temp1->next;
+    temp1->next = temp;
+}
+
+// Deleting node from nth position
+void delete_pos(int position,struct node* temp1)
+{
+    if(position == 1){
+        head = temp1->next;
+        free(temp1);
+        return ;
+    }
+    for(int i = 1; i <= position-2; i++){
+        temp1 = temp1->next;
+    }
+    struct node* temp2 = temp1->next;
+    temp1->next = temp2->next;
+    free(temp2);
+}
+
+// Display list
+void display(struct node* temp1){
+    printf("List : ");
+     while(temp1 != NULL){
+         printf("%d ",temp1->data);
+         temp1 = temp1->next;
+    }
+     if(temp1 == NULL){
+             printf("List is empty\n");
+         }
+    printf("\n");
+}

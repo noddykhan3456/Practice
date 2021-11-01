@@ -1,0 +1,22 @@
+#include <stdio.h>
+void power(int base,int index);
+void power(int base,int index){
+    int result=1;
+    if(index==0){
+        return 0;
+    }
+    while(index!=0){
+       result=result*base; 
+       --index;
+    }
+    printf("result = %d",result);
+}
+int main() {
+    int base,index;
+    printf("Enter value of base : \n");
+    scanf("%d",&base);
+    printf("Enter value of idex : \n");
+    scanf("%d",&index);
+    power(base,index);
+    return 0;
+}

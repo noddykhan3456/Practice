@@ -1,0 +1,116 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+// display array
+void display(int arr[], int used_size) {
+  printf("Array : ");
+  for (int i = 0; i < used_size; i++) {
+    printf("%d ", arr[i]);
+  }
+  printf("\n\n");
+}
+
+// insert element
+void insert(int arr[], int element, int index, int * used_size) {
+  for (int i = * used_size - 1; i >= index; i--) {
+    arr[i + 1] = arr[i];
+  }
+  arr[index] = element;
+  * used_size = * used_size + 1;
+}
+
+// delete element
+void delete(int arr[], int index, int * used_size) {
+  for (int i = index; i <= * used_size - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+  * used_size = * used_size - 1;
+}
+
+// search Element -> binary search
+int searchElement(int arr[] , int search, int used_size){
+    int low = 0,mid,high = used_size;
+    while(low != high){
+        mid = (low + high)/2;
+        if(arr[low] == search){
+            return low;
+        }
+        else if(arr[high] == search){
+            return high;
+        }
+        else if(arr[mid] == search){
+            return mid;
+        }
+        else if(search < arr[mid]){
+            high = mid -1;
+        }
+        else{
+            low = mid +1;
+        }
+    }
+    return -1;
+}
+
+int main() {
+//   Array declaration
+  int total, used_size, element, index, inindex, j, k, search;
+  printf("Enter total size of array : ");
+  scanf("%d", & total);
+  int arr[total];
+  printf("Enter size of array to be use :");
+  scanf("%d", & used_size);
+  printf("Enter sorted array : ");
+  for (int i = 0; i < used_size; i++) {
+    scanf("%d", & arr[i]);
+
+  }
+  display(arr, used_size);
+
+  do {
+    printf("Enter '1' for insert , '2' for delete and '3' for binary search: ");
+    scanf("%d", & j);
+    switch (j) {
+    case 1:
+    //   insert element
+      printf("Enter element and index : ");
+      scanf("%d %d", & element, & inindex);
+      insert(arr, element, inindex, & used_size);
+      display(arr, used_size);
+      break;
+      
+    case 2:
+    // delete element
+      printf("Enter idex to be deleted :");
+      scanf("%d", & index);
+      delete(arr, index, & used_size);
+      display(arr, used_size);
+      break;
+      
+    case 3:
+    // binary search
+      printf("Enter element to be search : ");
+      scanf("%d",&search);
+      int flag = searchElement(arr , search , used_size);
+      if(flag == -1){
+          printf("Element not found\n\n");
+      }
+      else{
+          printf("%d is at index %d\n\n",search,flag);
+      }
+    break;
+    
+    default :
+          printf("Invalid option\n");
+    }
+    printf("Press 1 for continue and any number for exit : ");
+    scanf("%d", & k);
+  } while (k == 1);
+
+  return 0;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframe And Animations</title>
+    <style>
+        .container {
+            background-color: rgb(211, 200, 108);
+            width: 1250px;
+        }
+
+        .box {
+            width: 250px;
+            height: 250px;
+            background-color: rgb(146, 137, 52);
+            position: relative;
+            /* animation-name: Nadeem1; */
+            animation-name: Nadeem2;
+            animation-duration: 5s;
+            animation-iteration-count: 1;
+
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+              /*Aage jaake ruk jayega */
+            /* animation-fill-mode: forwards; */
+
+            /* Aage jaake wapas ajayega*/
+            animation-fill-mode: forwards; 
+
+            /*slow-fast-slow */
+            /* animation-timing-function: ease-in-out; */ 
+
+            /*3 sec ke baad animation chalu hoga */
+            /* animation-delay: 3s;*/ 
+
+            /* animation-direction: reverse; */
+        }
+
+        @keyframes Nadeem1 {
+            from {
+                width: 250px;
+            }
+
+            to {
+                width: 750px;
+            }
+        }
+
+        @keyframes Nadeem2 {
+           0%{
+               top: 0px;
+               left: 0px;
+           }
+           20%{
+            top: 250px;
+            left: 0px;
+           }
+           35%{
+            top: 250px;
+               left: 250px;
+           }
+           50%{
+            top: 0px;
+            left: 250px;
+           }
+           70%{
+            top: 0px;
+            left: 500px;
+           }
+           80%{
+            top: 250px;
+            left: 500px;
+           }
+           90%{
+            top: 250px;
+            left: 750px;
+           }
+           95%{
+            top: 0px;
+            left: 750px;
+           }
+           100%{
+            top: 0px;
+            left: 1000px;
+           }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            This is box
+        </div>
+    </div>
+</body>
+
+</html>

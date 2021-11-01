@@ -1,0 +1,20 @@
+#include <stdio.h>
+int fact(int n);
+int fact(int n){
+   int result;
+   if(n==1||n==0){
+       return 1;
+   }
+   else{
+       result=n*fact(n-1);
+       return result;
+   }
+}
+int main() {
+  int num,factorial;
+  printf("Enter the number you want factorial for\n");
+  scanf("%d",&num);
+  factorial=fact(num);
+  printf("factorial = %d\n",factorial);
+   return 0;
+}

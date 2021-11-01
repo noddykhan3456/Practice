@@ -1,0 +1,31 @@
+// vit manipulation
+
+public class Main
+{
+	public static void main(String[] args) {
+	    
+        // 1.getBit
+// 		int n = 5;
+// 		int pos = 2;
+// 		int bitMask = 1 << pos;
+// 		if((bitMask == 0)){
+// 		    System.out.println("zero");
+// 		}else{
+// 		    System.out.println("one");
+// 		}
+		
+		//setBit
+// 		int n = 5;
+// 		int pos = 2;
+// 		int bitMask = 1 << pos;
+// 		int newNumber = bitMask | n;
+// 		System.out.println(newNumber);
+
+        // clearBit
+		int n = 5;
+		int pos = 2;
+		int bitMask = 1 << pos;
+		int newNumber = ~(bitMask) & n;
+		System.out.println(newNumber);
+	}
+}

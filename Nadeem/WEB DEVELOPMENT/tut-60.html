@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow function</title>
+</head>
+<body>
+    <div class="container">
+        This is container.
+    </div>
+    <script>
+        console.log("This is arrow function tutorials.");
+        // function greet(){
+        //      console.log("Good Morning.");
+        // }
+        // greet();
+
+        // let greet = () =>{
+        //      console.log("Good Morning.");
+        // }
+
+        // let greet = () =>console.log("Good Morning.");
+        // greet();
+        
+        // let sum = ( a, b) => a+b
+        // console.log("sum : "+sum(2,4));
+
+        let obj ={
+            arrName : ["Nadeem","Ramzan","shabaz"],
+            speak (){
+                this.arrName.forEach(element => {
+                    console.log("Goodmorning "+element);
+                });
+            }
+        }
+        obj.speak();
+    </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+1. List OOPS Fundamaentals 
+ 1. Abstraction: 
+	=> Abstraction is a process of showing the essentials features and hiding the implementation of those features.
+ 		exampl=> We have one abstract class User which has some esssential features and It's Implementation is hidden in some class
+			pubic abstract class User
+			{
+				// Essential Features
+				public void RegisterUser(UserDetails);
+				
+			}
+			
+			public class 
+			//Implementation of Fetaure
+			public void RegisterUser(Userdetails)
+			{
+				//How we are Implementing the Feature 
+				ValidateUser();//Private Method
+				GetDatabaseContext(); // Private Method
+				AddUserinDatabase(); // Private Method
+			}
+
+ 2. Encapsulation:
+	=> Encapsulation is a process of limiting the access of members and properties in a class.
+		example=> Here A class members are restricted to be accessed from outside the class using access modifiers and encapsulated inside the Class
+			
+			public class 
+			//Implementation of Fetaure
+			public void RegisterUser(Userdetails)
+			{
+				//These methods are encapsulated inside the class and not accessible out side the class
+				ValidateUser();//Private Method
+				GetDatabaseContext(); // Private Method
+				AddUserinDatabase(); // Private Method
+			}
+			
+ 3. Inheritance:
+	=> Inheritance is a process of utilizing the existing features(members of class) without re-writing them. The class from which the members are utilized is called the Parent/base class and the class which inherits the members of the Parent class is called the Derived/ child class 
+NOTE: Structs do not support inheritance, but they can implement interfaces.
+		example=>Here the members of Bank are inherited to HDFCBank and SBIBank and we are utilizing the same members inside the HDFCBank and SBIBank without rewriting them.
+			public class Bank 
+			{
+				public string address;
+				pubic string bankName;
+				public string branch;
+				public string ifscCode;
+				public string pincode;
+			}
+			
+			public class HDFCBank : Bank
+			{
+				
+			}
+
+			public class SBIBank : Bank
+			{
+				
+			}
+ 4. Polymorphism:
+	=> Polymorphism is a process of having more than one action/forms/behaviours of the same function/operators by taking different types of values or with a different number of values. 
+		example=> The Add Function has different behaviours based on type of parameters and number of parameters
+			
+			public class Calculator
+			{
+
+				public int Add(int a, int b)
+				{
+				 	return a+b;
+				}
+
+				public int Add(int a, int b,int c)
+				{
+				 	return a+b+c;
+				}
+
+				public double Add(double a, double b)
+				{
+				 	return a+b;
+				}
+			}
+3. Types of Inheritance
+	1. Sinlgle Level Inheritance
+		=> If a single class inheriting from another class then it is called Single level inheritance. There is only one base class and one derived class.
+		 example=> 
+			  public class A
+   			  {
+      			    public int a;
+      		            public A()
+       			     {
+          			 a = 10;
+        		     }
+    			  }
+
+    			  public class B: A
+    			  {
+			    //It will have members of Class A 
+        		    public int b;
+       			    public B()
+      			     {
+           			 b = 7;
+        		     }
+    			  }
+
+	2. Hierarchical Inheritance
+		=> Hierarchical inheritance involves multiple classes inheriting from a single base class. 
+ 			example=> 
+		
+			public class A
+   			  {
+      			    public int a;
+      		            public A()
+       			     {
+          			 a = 10;
+        		     }
+    			  }
+
+    			  public class B: A
+    			  {
+			    //It will have members of Class A 
+        		    public int b;
+       			    public B()
+      			     {
+           			 b = 7;
+        		     }
+    			  }
+
+ 			  public class C: A
+    			  {
+			    //It will have members of Class A 
+        		    public int c;
+       			    public C()
+      			     {
+           			 c = 7;
+        		     }
+    			  }
+
+	3. Multi level Inheritance
+		=> Multi-level inheritance involves a class inheriting from a derived class. This derived class may have inherited from the base class or another derived class.
+			example=>
+			 public class A
+   			  {
+      			    public int a;
+      		            public A()
+       			     {
+          			 a = 10;
+        		     }
+    			  }
+
+    			  public class B: A
+    			  {
+			    //It will have members of Class A 
+        		    public int b;
+       			    public B()
+      			     {
+           			 b = 7;
+        		     }
+    			  }
+
+ 			  public class C: B
+    			  {
+			    //It will have members of Class A as well as Members of Class B
+        		    public int c;
+       			    public C()
+      			     {
+           			 c = 7;
+        		     }
+    			  }
+
+	4. Multiple Inheritance
+		=> 
+	5. Hybrid Inheritace
+	6. Implicit Inheritance
+	
+4. Polymorphism
+5. Mehtod Overloading and Method Overriding  => add(int a) , add(long a) when calling add(10) which method will called?
+6. Early binding and late binding in c#
+7. Types of polymorphism
+8. Generics and Examle of Generics.
+9. Boxing Unboxing in c# with example
+10. Interface and Class default access modifiers
+11. Diff between Abstract class and Interface.
+12. Singleton Class
+13. Static Class
+14. Singleton Vs Static
+15. Delegates and Event
+16. Value type and Reference type
+17. Stack and Heap Memory
+18. Garbage Collection
+19. CLR and JIT
+20. what are Extensions Method in c#
+21. whats is Dictionary 
+22. what is Hash table
+23. wahts is IEnumrable 
+24. Diff IEnumbrable and IList
+25. Mnaged and Unmanaged Object wrt Garbage collecion
+26. Life of Garbage Collection
+
+

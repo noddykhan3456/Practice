@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS setTimeOut clearTimeOut</title>
+</head>
+<body>
+    <div class="container">
+        This is tutoroal 58
+        <div id="time">
+           Time is :
+        </div>
+    </div>
+    <script>
+        console.log("Hey");
+        function greet(name) {
+            console.log("Hello Goodmorning " + name);
+        }
+
+        // let time = setTimeout(greet , 3000 , "Nadeem");
+        // console.log(time);
+        // clearTimeout(time);
+
+        // intervalId = setInterval(greet , 2000 , " Nadeem" );
+        // clearInterval(intervalId);
+
+        function display() {
+            let time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time ;
+        }
+        // setInterval(display , 1000);
+        // display();
+    </script>
+</body>
+</html>

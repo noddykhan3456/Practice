@@ -1,0 +1,39 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner input = new Scanner(System.in);
+	    System.out.print("Enter number : ");
+	    int num = input.nextInt();
+	    double rem , armstrongNumber = 0 ;
+	    int originalNumber = num ;
+	    int digit = 0 ;
+	    while(num != 0){
+	        num = num / 10;
+	        digit++;
+	    }
+	    num = originalNumber;
+	    while(num != 0)
+	    {
+	        rem = num % 10 ;
+	        armstrongNumber = armstrongNumber + Math.pow(rem,digit) ;
+	        num = num / 10 ;
+	    }
+	    if(originalNumber == armstrongNumber)
+	    {
+	        System.out.println(originalNumber + " is Armstrong number");
+	    }
+	    else
+	    {
+	        System.out.println(originalNumber + " is not Armstrong number");
+	    }
+	}
+}

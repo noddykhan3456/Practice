@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - String and String Methid</title>
+</head>
+<body>
+    <div class="container">
+        <h1>This is heading</h1>
+        <div id="idname"></div>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto dignissimos eum est cum unde. Dolores, error ducimus! Mollitia vero quidem quas perferendis. Quas vitae eos et a illo obcaecati dolorum dolor sit voluptate sed.</p>
+        <script>
+            var String = "kuch bhi";
+            // OR
+            var name = 'Nadeem';
+            // OR
+            var name = `Nadeem`;
+            // console.log(String + name);
+            var temp = `${name} is a good person and woh ${String} nahi karta`;
+            console.log(temp);
+            var len = temp.length ;
+            console.log(`Length of temp is ${len}`);
+
+            // document.getElementById('idname').innerHTML = '<p>This is new paragraph</p>';
+            // OR
+            document.getElementById('idname').innerHTML = "<p>This is new paragraph</p>";
+
+        </script>
+    </div>
+</body>
+</html>

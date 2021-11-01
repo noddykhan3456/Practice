@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS- String Method</title>
+</head>
+<body>
+    
+
+    <script>
+        var str = "Hey I am a String I"
+        console.log(str);
+
+        // First occerence of letter 
+        var position = str.indexOf('I');
+        console.log(position);
+
+        // Last occerence of letter 
+        var position1 = str.lastIndexOf('I');
+        console.log(position1);
+
+        // Subtring from a string 
+        // var str1 = str.slice(2,8);
+        // var str1 = str.substring(2,8);
+        var str1 = str.substr(2,8); // 2-> starting index and 8-> length
+        console.log(str); //Original string
+        console.log(str1);
+        
+        // Replacing string from a string 
+        var replace = str.replace("String","Nadeem");
+        console.log(replace);
+        
+        // To upper case all the string 
+        // var upperStr = str.toUpperCase();
+        // console.log(upperStr);
+
+        // To lower case all the string 
+        // var lowerStr = str.toLowerCase();
+        // console.log(lowerStr);
+        
+        // Concating a string 
+        var newstr = str.concat(" am a new String");
+        console.log(newstr);
+        
+        var character = str.charAt(4);
+        console.log(character);
+
+        var character = str.charCodeAt(4);
+        console.log(character);
+
+        console.log(str[7]);
+    </script>    
+</body>
+</html>

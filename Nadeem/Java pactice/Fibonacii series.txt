@@ -1,0 +1,28 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) 
+	{
+		Scanner input = new Scanner(System.in);
+	    System.out.print("Enter the number till you want FIBONACCI SERIES : ");
+		int n = input.nextInt();
+		int firstTerm = 0;
+		int secondTerm = 1;
+		int temp ;
+		System.out.print(firstTerm +" " + secondTerm + " ");
+		for(int i = 0; i < n-2; i++) {
+		    temp = firstTerm + secondTerm;
+		    firstTerm = secondTerm ;
+		    secondTerm = temp ;
+		    System.out.print(secondTerm + " ");
+		}
+   }
+}

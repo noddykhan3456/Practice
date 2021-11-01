@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int main(){
+   int num_1,num_2,num_3,l;
+   printf("Enter the three number\n");
+   scanf("%d\n %d\n %d\n",&num_1,&num_2,&num_3);
+   l=num_1>num_2&&num_1>num_3?num_1:num_2>num_3?num_2:num_3;
+   printf("Largest of the three number is %d",l);
+return 0;
+}

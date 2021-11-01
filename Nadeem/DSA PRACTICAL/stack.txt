@@ -1,0 +1,83 @@
+#include <stdio.h> 
+#define SIZE 3
+
+int stack[SIZE];
+int stackTop = -1;
+
+void push(int val);
+int isFull();
+void display();
+int isEmpty();
+int peek();
+void pop();
+
+int main()
+{
+    push(10);
+    push(20);
+    printf("Stack top = %d\n",peek()); 
+    push(30);
+    push(40);
+    pop();
+    pop();
+    pop();
+    pop();
+    return 0;
+}
+
+void push(int val){
+    if(isFull()){
+        printf("Stack full error\n");
+    }
+    else{
+        stackTop++;
+        stack[stackTop]=val;
+        display();
+    }
+}
+
+int isFull(){
+    if(stackTop==SIZE-1){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+void display(){
+    int i;
+    printf("stack :");
+    for(i=0 ; i<=stackTop ; i++){
+        printf("%d\t",stack[i]);
+    }
+    printf("\n");
+}
+
+int peek(){
+    if(isEmpty()){
+        printf("Stack is empty error\n");
+    }
+    else{
+        return stack[stackTop];
+    }
+}
+
+int isEmpty(){
+    if(stackTop==-1){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+
+void pop(){
+    if(isEmpty()){
+        printf("Stack is empty error\n");
+    }
+    else{
+        stackTop--;
+        display();
+    }
+}

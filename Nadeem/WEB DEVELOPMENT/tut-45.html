@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS grid + Media query</title>
+    <style>
+        @media only screen and (max-width:300px) {
+            body {
+                background-color: red;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media only screen and (min-width:300px) and (max-width:500px) {
+            body {
+                background-color: blue;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media(min-width:500px) and (max-width:800px) {
+            body {
+                background-color: yellow;
+            }
+
+            .container {
+                grid-template-areas:
+                    'navbar navbar navbar navbar'
+                    'section section section section'
+                    'aside aside aside aside'
+                    'footer footer footer footer ';
+            }
+
+            /* aside{
+            display: hidden; */
+            /* } */
+            span {
+                display: block;
+                text-align: center;
+            }
+        }
+
+        @media(min-width:800px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-areas:
+                'navbar navbar navbar navbar'
+                'section section section aside'
+                'footer footer footer footer'
+            ;
+        }
+
+        .style {
+            border: 2px solid black;
+            background-color: lightcyan;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+            grid-area: navbar;
+        }
+
+        span {
+            padding: 0px 20px;
+        }
+
+        section {
+            grid-area: section;
+        }
+
+        #aside {
+            grid-area: aside;
+        }
+
+        footer {
+            text-align: center;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav class="style">
+            <span>Home</span>
+            <span>Service</span>
+            <span>About us</span>
+            <span>Contact</span>
+        </nav>
+
+        <section class="style">
+            <h2>Section</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo qui et, assumenda dolorum earum atque iure
+                obcaecati? Exercitationem possimus corporis sit qui repellat saepe quibusdam deleniti ab accusamus amet,
+                architecto, ipsam recusandae minima nesciunt fugiat deserunt quos est autem modi hic facilis ullam quo
+                libero! Illo iusto laborum, tenetur incidunt magnam labore sapiente, distinctio natus, minus iure
+                ratione sunt ab dicta mollitia ipsam quis error adipisci repellat voluptates itaque. Maxime, voluptatum
+                vero explicabo, atque animi consequatur voluptate id ex provident rerum harum saepe nesciunt corrupti
+                quos magni laboriosam. Provident labore, laboriosam fugit delectus ducimus doloribus sint sapiente
+                magnam possimus illo dolorem consectetur voluptates molestiae impedit repellat porro officia explicabo
+                laborum maiores distinctio nulla nihil alias! Labore velit quaerat soluta dolor!</p>
+        </section>
+
+        <aside id="aside" class="style">
+            <h1>Aside</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse reprehenderit sequi error, laboriosam
+                ipsum autem modi, delectus optio soluta fugit consectetur dolorum perferendis a culpa praesentium fuga
+                eligendi cupiditate nulla? Veniam, obcaecati architecto? Quisquam placeat provident, qui similique,
+                facilis rem neque voluptates illo sit modi libero ab aliquid dolorum voluptas?</p>
+        </aside>
+
+        <footer class="style">
+            <div>copyright reserved 2021</div>
+        </footer>
+    </div>
+</body>
+
+</html>

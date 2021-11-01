@@ -1,0 +1,90 @@
+#include <stdio.h>
+typedef struct time{
+   int hr;
+   int min;
+   int sec;
+}time;
+void display_time(time t){
+    printf("      %d    %d    %d",t.hr,t.min,t.sec);
+}
+int comp_time(time t1,time t2){
+    if(t1.hr>t2.hr){
+        return 1;
+    }
+    if(t1.hr<t2.hr){
+        return -1;
+    }if(t1.min>t2.min){
+        return 1;
+    }if(t2.min>t2.min){
+        return 1;
+    }if(t1.sec>t2.sec){
+        return 1;
+    }if(t1.sec>t2.sec){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+typedef struct date{
+    int date;
+    int month;
+    int year;
+}date ;
+void display_date(date d){
+    printf("%d    %d     %d",d.date,d.month,d.year);
+}
+int main() {
+    date d1 ,d2;
+    printf("Enter date 1 \n");
+    printf("date= ");
+    scanf("%d",&d1.date);
+    printf("\n");
+    printf("month= ");
+    scanf("%d",&d1.month);
+    printf("\n");
+    printf("year= ");
+    scanf("%d",&d1.year);
+    printf("\n");
+    printf("Enter date 2 \n");
+    printf("date= ");
+    scanf("%d",&d2.date);
+    printf("\n");
+    printf("month= ");
+    scanf("%d",&d2.month);
+    printf("\n");
+    printf("year= ");
+    scanf("%d",&d2.year);
+    printf("\n");
+    time t1 , t2;
+    printf("Enter time 1 \n");
+    printf("Hour= ");
+    scanf("%d",&t1.hr);
+    printf("\n");
+    printf("min= ");
+    scanf("%d",&t1.min);
+    printf("\n");
+    printf("sec= ");
+    scanf("%d",&t1.sec);
+    printf("\n");
+    printf("Enter time 2 \n");
+    printf("Hour= ");
+    scanf("%d",&t2.hr);
+    printf("\n");
+    printf("min= ");
+    scanf("%d",&t2.min);
+    printf("\n");
+    printf("sec= ");
+    scanf("%d",&t2.sec);
+    printf("\n");
+    int result;
+    printf("DATE MONTH  YEAR     HR   MIN    SEC\n");
+    display_date(d1);
+    display_time(t1);
+    printf("\n");
+    display_date(d2);
+    display_time(t2);
+    result = comp_time(t1,t2);
+    printf("\ncompare = %d",result);
+    return 0;
+}

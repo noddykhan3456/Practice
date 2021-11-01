@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>PADDING AND MARGIN</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #7FFFD4;
+            border: 3px solid green;
+            padding: 5px 10px 15px 20px;
+            /* top rigth bottom left*/
+            /*               OR
+                    padding-top   : 10px;
+                    padding-right : 20px;
+                    padding-left  : 15px;
+                    padding-bottom: 15px; */
+
+            margin: 5px 10px 15px 20px;
+            /* top rigth bottom left*/
+            /*               OR
+                    margin-top   : 10px;
+                    margin-right : 20px;
+                    margin-left  : 15px;
+                    margin-bottom: 15px; */
+
+            /* margin : 15px 20px; */
+            /* margin : y(top/bottom) x(left/right); ---> for same top/bottom and same left/right */
+
+            border-radius: 15px;
+        }
+
+        body {
+            background-color: #00BFAF;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Start your code here -->
+    <div class="container">
+        <h3>PADDING AND MARGIN</h3>
+        <p id="first">lorem2sjfksdsvlwifndjs vcwndjsd v weiujkcs jx lwfnj wfn cwerfnjc fjvelwlcdjsncliruhehn wen c xgu qwnc tgik cds rllw clfjdc 5</p>
+    </div>
+    <div class="container">
+        <h3>PADDING AND MARGIN</h3>
+        <p id="second">lorem2sjfksdsvlwifndjs vcwndjsd v weiujkcs jx lwfnj wfn cwerfnjc fjvelwlcdjsncliruhehn wen c xgu qwnc tgik cds rllw clfjdc 5</p>
+    </div>
+    <div class="container">
+        <h3>PADDING AND MARGIN</h3>
+        <p id="third">lorem2sjfksdsvlwifndjs vcwndjsd v weiujkcs jx lwfnj wfn cwerfnjc fjvelwlcdjsncliruhehn wen c xgu qwnc tgik cds rllw clfjdc 5</p>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Before and After Psuedo selector</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&family=Lora&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0px;
+            padding: 0px;
+        }
+        header::before{
+            content: "";
+            background-image: url('https://vastphotos.com/files/uploads/photos/10684/beautiful-landscape-photo-l.jpg');
+            height: 120vh;
+            width: 100vw;
+            background-size: 100% 100%;
+             position: absolute;
+            top: 0px;
+            z-index: -1;
+           opacity: 0.6;
+        }
+        ul{
+            display: flex;
+            flex-direction: row;
+        }
+        li{
+            padding: 25px;
+            list-style: none;
+            font-family: 'Lora', serif;
+        }
+        section{
+            
+            display: flex;
+            flex-direction: column;
+            margin-bottom: -70px;
+            margin-left: 150px;
+            margin-right: 150px;
+            /* border: 2px solid red; */
+            height: 350px;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Baloo Tamma 2', cursive;
+
+        }
+        /* section::before{
+            content: "This is a content";
+        } */
+        h1{
+            font-size: 3rem;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul class="navigation">
+                <li class="times">Home</li>
+                <li class="times">Service</li>
+                <li class="times">About Us</li>
+                <li class="times">Contact</li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <h1>Welcome To My Website !</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident debitis cum modi eveniet. Officia
+            voluptates voluptatum culpa sint ducimus assumenda eius, placeat deleniti. Aliquam magni eaque dolore
+            incidunt! Vitae aperiam harum deserunt reiciendis repellendus!</p>
+    </section>
+    <hr>
+</body>
+
+</html>

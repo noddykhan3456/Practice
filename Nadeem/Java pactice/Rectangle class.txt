@@ -1,0 +1,43 @@
+import java.util.*;
+
+public class Main
+{   
+    // Data Field
+    int length;
+    int breadth;
+    int area;
+    int perimeter;
+    int diagonal;
+    
+    // Input
+    public void inputdata() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the length of rectangle : ");
+        length = sc.nextInt();
+        System.out.print("Enter the breadth of rectangle : ");
+        breadth = sc.nextInt();
+    }
+    
+    // calculation
+    public  void calculation() {
+        area = length*breadth;
+        perimeter = 2*(length + breadth);
+        diagonal = (int)Math.sqrt(length*length + breadth*breadth);
+    }
+    
+    // Output
+    public  void outputdata() {
+        System.out.println("Area of Rectangle = "+area);
+        System.out.println("perimeter of Rectangle = "+perimeter);
+        System.out.println("Diagonal of Rectangle = "+diagonal);
+    }
+    
+	public static void main(String[] args) {
+	   // System.out.println("In main method");
+	    Main ob = new Main();
+	   //  System.out.println("Created Rectangle claa Object");
+		ob.inputdata();
+		ob.calculation();
+		ob.outputdata();
+	}
+}

@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main()
+{
+    
+    int c,k;
+    do{
+        printf("Enter '1' for insert at end\nEnter '2' for insert at begining\n");
+        scanf("%d",&c);
+        switch(c){
+            case 1:
+            break;
+            
+            case 2:
+            break;
+            
+            default :
+            printf("Invalid option.");
+        }
+        printf("Enter 1 for continue : ");
+        scanf("%d",&k);
+    }while(k == 1);
+    return 0;
+}

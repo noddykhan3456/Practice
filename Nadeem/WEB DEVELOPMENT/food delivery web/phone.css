@@ -1,0 +1,22 @@
+body{
+    /* background-color: red; */
+}
+/*navigation*/
+#navbar{
+    flex-direction: column;
+}
+/*Home*/
+.home{
+    height: 275px;
+}
+.home::before{
+    height: 480px;
+    /* width: 663px; */
+}
+.home p{
+    font-size: 13px;
+}
+/*service*/
+#service{
+    flex-direction: column;
+}

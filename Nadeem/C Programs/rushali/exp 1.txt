@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(){
+    int distance,dist_m,dist_km;
+    printf("Enter distance between two cities in meter = \n");
+    scanf("%d",&distance);
+    dist_km = distance/1000;
+    dist_m = distance%1000;
+  printf("Distance = %d kilometer and %d meter",dist_km,dist_m);
+return 0;
+}

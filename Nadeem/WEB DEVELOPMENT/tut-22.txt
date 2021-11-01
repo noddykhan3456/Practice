@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pseudo selector and more designing</title>
+    <style>
+        .container {
+            border: 3px solid red;
+            background-color: #F6A8F3;
+            margin: 33px auto;
+            padding: 15px;
+        }
+
+        .button {
+            border: 1px solid red;
+            background-color: #8A2BE2;
+            color: black;
+            border-radius: 2px;
+                 
+            cursor: pointer;
+            font-size: 17px;
+             }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
+        a:hover{
+            color: #000000;
+            background-color: #green;
+        }
+
+        .button:hover {
+            background-color: #FFCCFF;
+        }
+
+        .button {
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="cont1">
+        <h1>This is my heading</h1>
+        <p>ladkjnkc kadjbc nadee, Khan mihd nadeem naam hai mera samjah kya nahi samjhan tohkhaye ga lafa</p>
+        <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_link" class="button" id="link1">Read more</a>
+        <button class="button">Contact us</button>
+    </div>
+</body>
+
+</html>

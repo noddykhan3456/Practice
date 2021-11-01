@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct array{
+    int total_size;
+    int used_size;
+    int* data;
+};
+
+void create_array(struct array* marks , int uSize , int tSize){
+    marks->total_size = tSize;
+    marks->used_size = uSize;
+    marks->data = (int*)malloc(tSize*sizeof(int));
+}
+
+void set_value(struct array* marks){
+    int n;
+    printf("\n");
+    for(int i = 0; i < marks->used_size; i++){
+        printf("Enter element %d : ",i+1);
+        scanf("%d",&n);
+        (marks->data)[i] = n;
+    }
+}
+
+void display(struct array* marks){
+     printf("\nArray : ");
+     for(int i = 0; i < marks->used_size; i++){
+        printf("%d ",(marks->data)[i]);
+    }
+}
+
+int main() {
+    struct array marks;
+    int t_size,u_size;
+    
+    printf("Enter total size of array : ");
+    scanf("%d",&t_size);
+    
+    printf("Enter used size of array : ");
+    scanf("%d",&u_size);
+    
+    create_array(&marks , u_size , t_size);
+    set_value(&marks);
+    display(&marks);
+    return 0;
+}

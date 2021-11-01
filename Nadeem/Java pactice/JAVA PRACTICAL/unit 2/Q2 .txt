@@ -1,0 +1,65 @@
+/******************************************************************************
+
+                            Online Java Compiler.
+                Code, Compile, Run and Debug java program online.
+Write your code in this editor and press "Run" button to execute it.
+
+*******************************************************************************/
+class student
+{
+    String name,address;
+    int age;
+    student()
+    {
+        name = "unknown";
+        address = "not available";
+        age = 0;
+    }
+    
+    void setInfo(String n,int a)
+    {
+        name = n;
+        age = a;
+    }
+    
+    void setInfo(String n,int a,String add)
+    {
+        name = n;
+        age = a;
+        address = add;
+    }
+   
+    void display()
+    {
+        System.out.println("Name : "+name+"\nAge : "+age+"\nAddress : "+address+"\n\n");
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    student[] s = new student[10];
+	    s[0] = new student();
+	    s[0].setInfo("Raj",18,"Mumbai");
+	    s[1] = new student();
+	    s[1].setInfo("Rahul",18,"Mumbai");
+	    s[2] = new student();
+	    s[2].setInfo("shabaz",18);
+	    s[3] = new student();
+	    s[3].setInfo("sohail",19,"banglore");
+	    s[4] = new student();
+	    s[4].setInfo("wasim",20,"Mumbai");
+	    s[5] = new student();
+	    s[5].setInfo("Asim",19);
+	    s[6] = new student();
+	    s[6].setInfo("Gaurav",18,"pune");
+	    s[7] = new student();
+	    s[7].setInfo("Zahid",21,"luckhnow");
+	    s[8] = new student();
+	    s[8].setInfo("Inamul",20,"Mumbai");
+	    s[9] = new student();
+	    s[9].setInfo("Rashid",19);
+	    for(int i = 0; i<10; i++){
+	       s[i].display();
+	    }
+	}
+}

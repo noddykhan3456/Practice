@@ -1,0 +1,44 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+  int n,m;
+  int i,j,k,l;
+    printf("Matrix 1 : Enter number of row = ");
+    scanf("%d",&n);
+    printf("\n");
+    printf("Matrix 1 : Enter number of coloumn = ");
+    scanf("%d",&m);
+    printf("\n");
+  int matrix1[n][m];
+  for( i=0;i<n;i++){
+      for( j=0;j<m;j++){
+        printf("Enter %d%d element of matrix1 : ",i+1,j+1);
+        scanf("%d",&matrix1[i][j]);
+        printf("\n");
+      } 
+  }
+   printf("Matrix 2 : Enter number of row = ");
+    scanf("%d",&k);
+     printf("\n");
+    printf("Matrix 2 : Enter number of coloumn = ");
+    scanf("%d",&l);
+     printf("\n");
+  int matrix2[k][l];
+   for( i=0;i<k;i++){
+      for( j=0;j<l;j++){
+        printf("Enter %d%d element of matrix1 : ",i+1,j+1);
+        scanf("%d",&matrix2[i][j]);
+         printf("\n");
+      } 
+  }
+  printf("\nSum of matrix is\n");
+   for( i=0;i<k;i++){
+      for( j=0;j<l;j++){
+        printf(" %d ",matrix1[i][j]+matrix2[i][j]);
+      } 
+      printf("\n");
+  }
+  
+    return 0;
+}

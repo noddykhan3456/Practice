@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MORE ON CSS SELECTOR</title>
+    <STyle>
+        /* div li p{
+            background-color: black;
+            color: blanchedalmond;
+        } */
+
+     /* applied to only p which is direct inside div  */
+        div > p{
+            background-color: rgb(214, 52, 52);
+            color: blanchedalmond;
+        }
+
+        /* applied to p which is just after the end of div  */
+        div + p{
+            background-color: rgb(123, 219, 111);
+            color: blanchedalmond;
+        }
+
+    </STyle>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li><p>This is para inside li</p></li>
+            </ul>             
+            <p>This is another para</p>
+        </div>
+        <p>This is para</p>
+    </div>
+    <p>This is outermost para</p>
+</body>
+</html>

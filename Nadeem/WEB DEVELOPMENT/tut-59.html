@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Date and Time</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            margin:8px 10px ;
+            padding: 15px ;
+            background-color:blanchedalmond;
+            text-align: center;
+        }
+        #time{
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div >
+            Time : <span id="time">
+            </span>
+        </div>
+    </div>
+    <script>
+        console.log("Date And Time");
+        let dat = new Date();
+        console.log(dat);
+
+        let dt = new Date(0);
+        console.log(dt);
+
+        // Date(Year,month,date,hour,min ,sec,millisec)
+        let t = new Date(2022,04,27,5,10,2,21);
+        console.log(t); 
+
+        // Maethods of date
+        let Y = dat.getFullYear()
+        console.log(Y); 
+        let M = dat.getMonth()
+        console.log(M); 
+        let D = dat.getDate()
+        console.log(D); 
+        let Day = dat.getDay()
+        console.log(Day);
+
+        let setdate = t.setDate(12) ;
+        console.log(t); 
+
+        console.log(Date.now());
+
+        setInterval(display , 1000); 
+        function display() {
+            document.getElementById('time').innerHTML = new Date();
+        }
+    </script>
+</body>
+</html>

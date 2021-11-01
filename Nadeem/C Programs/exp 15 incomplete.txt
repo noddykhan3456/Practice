@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int n,temp;
+    printf("Enter how many numbers you want :");
+    scanf("%d",&n);
+ int array[n];
+    for(int i=0;i<n;i++){
+        printf("enter %d element :",i+1);
+        scanf("%d",&array[i]);
+    }
+     printf("Before sorting\n");
+     for(int i=0;i<n;i++){
+        printf("array[%d] = %d\n",i,array[i]);
+    } 
+     printf("\nAfter sorting\n");
+    for(int i=0;i<n;i++){
+        if(array[i+1]>array[i]){
+         temp=array[i+1];
+        array[i+1]=array[i];
+        array[i]=temp;
+        }
+        printf("array[%d] = %d\n",i,array[i]);
+    } 
+    return 0;
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ALIGNMENT</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #DFBFAA;
+            border: 3px solid purple;
+            width: 500px;
+            margin: 10px auto;
+        }
+
+        .item {
+
+            border: 3px solid aqua;
+            background-color: #808080;
+            margin: 15px 5px;
+            padding: 12px 3px;
+
+        }
+
+        #fruit {
+            float: left;
+            width: 48%;
+        }
+
+        #comp {
+            float: right;
+            width: 48%;
+        }
+
+        #stationary {
+            /*  float: left; */
+            width: 98%;
+            clear: both;
+        }
+
+        p,
+        h3 {
+            text-align: right;
+            text-align: left;
+            text-align: center;
+            text-align: justify;
+        }
+
+        h1 {
+            width: 100%;
+            margin: 25px 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>WELCOME TO MY STORE</h1>
+        <div id="fruit" class="item">
+            <h3>FRUITS</h3>
+            <p id="fruitpara">lorem20 akdjbcnc a sadhfuir bc kurgy chjbfeuyr a lsdcnkhabch nasswwm damja ku dsfsddgwerrfdstrhgfdve frdrgbdfvr gf vertgfdcv ehrtfdc dfgvertegfd cgdfa</p>
+        </div>
+
+        <div id="comp" class="item">
+            <h3>COMP</h3>
+            <p id="comppara">lorem20 akdjbcnc a sadhfuir bc kurgy chjbfeuyr a lsdcnkhabch nasswwm damja kua dsfsverfdsvsdcdsd dfsdxcvsdfgdcx efdsfsvcrg fsxcvfgrdfsv hnfgdvdsfbfrgfdvcvcbhrgfdsxcdf sgdb dfvf cv dfg fsdf v</p>
+        </div>
+
+        <div id="stationary" class="item">
+            <h3>STATIONARY</h3>
+            <p id="stationarypara">lorem20 akdjbcnc a sadhfuir bc kurgy chjbfeuyr a lsdcnkhabch nasswwm damja kua</p>
+        </div>
+        <div id="stationary" class="item">
+            <h3>GLASS</h3>
+            <p id="glasspara">lorem20 akdjbcnc a sadhfuir bc kurgy chjbfeuyr a lsdcnkhabch nasswwm damja kua</p>
+        </div>
+
+    </div>
+
+
+
+</body>
+
+</html>
